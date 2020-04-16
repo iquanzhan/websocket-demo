@@ -64,10 +64,8 @@
                         console.log(response);
                     });
                 this.stompClient.send("/welcome", {}, "555447");//5
-
+                debugger;
                 });
-
-
             },
             _destroySockJs() {
                 if (this.stompClient != null) {

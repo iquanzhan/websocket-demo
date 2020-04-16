@@ -25,7 +25,7 @@ public class ServerTask {
         Random r = new Random();
         double v = r.nextDouble();
         // 查询服务器状态
-        wsTemplate.convertAndSend("/topic/server", v);
+        //wsTemplate.convertAndSend("/topic/server", v);
 
     }
 }

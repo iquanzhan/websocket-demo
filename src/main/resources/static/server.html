@@ -38,7 +38,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/element-ui/2.4.11/index.js"></script>
 <script src="https://cdn.bootcss.com/axios/0.19.0-beta.1/axios.min.js"></script>
 <script>
-    const wsHost = "http://localhost:8080/notification";
+    const wsHost = "http://localhost:8081/notification";
     const wsTopic = "/topic/server";
 
     const app = new Vue({
@@ -63,8 +63,11 @@
                     this.stompClient.subscribe(wsTopic, (response) => {
                         console.log(response);
                     });
+                this.stompClient.send("/welcome", {}, "555447");//5
 
                 });
+
+
             },
             _destroySockJs() {
                 if (this.stompClient != null) {
